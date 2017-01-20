@@ -1,3 +1,33 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container >
+	  <md-sidenav #sidenav mode="push" >
+		<!-- <button md-icon-button (click)="sidenav.toggle()">
+			<md-icon color="primary">arrow_back</md-icon>
+		</button> -->
+		<nav id="sidenav" class="sidenav">
+			<div class="sidenav-header">
+				<button md-icon-button (click)="sidenav.toggle()">
+					<md-icon>arrow_back</md-icon>
+				</button>
+			</div>
+			<a (click)="sidenav.toggle()" routerLink="/home" routerLinkActive="active">Home</a>
+			<a (click)="sidenav.toggle()" routerLink="/poop" routerLinkActive="active">poop</a>
+		</nav>
+
+		  <!-- <md-list-item >
+		   	<a (click)="sidenav.toggle()" md-button routerLinkActive="active" routerLink="/home"><md-icon md-list-avatar>home</md-icon><span>         HOME</span></a>
+		  </md-list-item>
+		  <md-list-item >
+		    <a (click)="sidenav.toggle()" md-button routerLinkActive="active" routerLink="/poop"><md-icon md-list-avatar>home</md-icon><span>         POOP</span></a>
+		  </md-list-item> -->
+	  </md-sidenav>
+	<md-toolbar color="primary">
+		<button md-icon-button (click)="sidenav.toggle()">
+			<md-icon >menu</md-icon>
+		</button>
+		<span class="title">Golden</span>
+	</md-toolbar>
+  <!-- <app-toolbar></app-toolbar> -->
+  <router-outlet></router-outlet>
+</md-sidenav-container>
+
+

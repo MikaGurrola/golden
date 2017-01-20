@@ -1,0 +1,185 @@
+@import '../../styles.sass';
+
+.hero
+	height: 100vh;
+	width: 100%;
+	background-color: gray;
+	background: url(../assets/hero.jpg) no-repeat top center fixed;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	color: white;
+
+	h2
+		font-size: 50px;
+		line-height: 100px;
+		@media screen and (max-width: $mobile) 
+			line-height: 70px;
+			margin-bottom: 15px;
+	
+
+	p
+		font-size: 26px;
+		line-height: 46px;
+
+
+.home
+	
+	h2
+		color: $light-gold;
+		font-size: 32px;
+		font-family: 'Rubik', sans-serif;
+		line-height: 38px;
+		font-weight: 300;
+		text-align: center;
+		padding: 50px 0;
+
+	span
+		// font-family: 'Pacifico', cursive;
+		font-weight: 700;
+
+	.teal-block
+		background: linear-gradient(to bottom, rgba(0, 191, 165, 1) 0%, rgba(167, 255, 235, 1) 100%);
+
+	.features
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 80px;
+		@media screen and (max-width: $tablet) 
+			flex-direction: column;
+	
+		.feature
+			width: 30%;
+			text-align: center;
+			@media screen and (max-width: $tablet) 
+				width: 100%;
+				margin-bottom: 50px;
+		
+			md-icon
+				display: inline-block;
+				color: $light-gold;
+				margin: 0 auto 15px auto;
+				font-size: 80px;
+				height: 80px;
+				width: 100%;
+		
+			h4
+				text-transform: uppercase;
+				color: white;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 42px;
+				margin-bottom: 25px;
+			p
+				padding: 0 15px;
+
+.bottom-cta
+	height: 100vh;
+	width: 100%;
+	background-color: gray;
+	background: url(../assets/bottom-cta.jpg) no-repeat top center fixed;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	color: white;
+
+	h2
+		font-size: 50px;
+		line-height: 100px;
+		@media screen and (max-width: $mobile) 
+			line-height: 70px;
+			margin-bottom: 15px;
+	
+
+	p
+		font-size: 26px;
+		line-height: 46px;
+
+
+
+.address-input
+	width: 500px;
+	margin: 0 auto;
+	padding: 15px;
+	display: flex;
+	padding: 15px 15px 5px 15px;
+	@media screen and (max-width: $tablet) 
+		width: 300px;
+
+	button
+		background-color: transparent;
+		border: 0px;
+		color: $light-teal;
+		margin-left: 30px;
+
+
+.group
+	position: relative;
+	width: 100%;
+	input
+		font-size: 18px;
+		padding: 5px 0;
+		display: block;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid white;
+		background-color: transparent;
+		color: white;
+			
+		&:focus
+			outline: none;
+	
+	label
+		color: white; 
+		font-size: 18px;
+		font-weight: normal;
+		position: absolute;
+		pointer-events: none;
+		left: 5px;
+		top: 5px;
+		transition: 0.2s ease all;
+		letter-spacing: 0.5px;
+
+
+
+/* active state */
+input:focus ~ label, input:valid ~ label
+	top: -10px;
+	font-size: 12px;
+	color: $light-teal;
+
+input:focus, button:focus
+	outline: none;
+
+/* BOTTOM BARS ================================= */
+.bar  
+	position: relative; 
+	display: block; 
+
+.bar:before, .bar:after  
+	content: '';
+	height: 2px; 
+	width: 0;
+	bottom: 0; 
+	position: absolute;
+	background: $light-teal; 
+	transition: 0.2s ease all; 
+
+.bar:before
+	left: 50%;
+.bar:after
+	right: 50% ;
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after
+	width: 50%;
+
+// removes required highlight in firefox
+input:invalid 
+    box-shadow: none;

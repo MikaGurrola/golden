@@ -1,0 +1,14 @@
+{
+	"screenshots": [
+		{
+			"img": "assets/bottom-cta.jpg",
+			"description": "The quick brown fox jumped over the lazy dog",
+			"liked": "0"
+		},
+		{
+			"img": "assets/hero.jpg",
+			"description": "She sells sea shells by the sea shore",
+			"liked": "0"
+		}
+	]
+}
